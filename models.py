@@ -101,6 +101,7 @@ class CasClinique(BaseModel):
     Représentation exacte de la Figure 1.
     """
     id_unique: str # Pour gestion interne (Preuve d'intégrité)
+    hash_authentification: str  # <--- AJOUT : La signature SHA-256 du fichier source
     
     # Les 7/8 branches connectées au cercle vert "Cas clinique"
     donnees_personnelles: DonneesPersonnelles

@@ -19,21 +19,19 @@ class ClinicalCaseFilter:
             print(f"[-] Erreur : Le fichier {path} n'existe pas.")
 
     def filter_by_keyword(self, keyword: str) -> List[CasClinique]:
-        """
-        Filtre les cas contenant un mot clé (ex: 'Paludisme', 'Fièvre')
-        Recherche dans le motif de consultation ou les résultats d'examens.
-        """
         keyword = keyword.lower()
         results = []
         for case in self.cases:
-            # On cherche dans le motif
+            # 1. Recherche dans le motif (ex: "Susplection Palu")
             if keyword in case.motif_consultation.lower():
                 results.append(case)
                 continue
             
-            # Ou dans les examens
+            # 2. Recherche dans les examens (PLUS INTELLIGENT)
             for exam in case.examens_complementaires:
-                if keyword in exam.resultat.lower() or keyword in exam.nom.lower():
+                text = exam.resultat.lower()
+                # On veut que le mot clé soit là, MAIS PAS précédé de "négatif"
+                if keyword in text and "négatif" not in text: 
                     results.append(case)
                     break
         return results

@@ -1,0 +1,61 @@
+[
+    {
+        "id_unique": "CASE-73ABE0CE",
+        "donnees_personnelles": {
+            "age": 77,
+            "sexe": "F",
+            "etat_civil": null,
+            "profession": "Retraitée",
+            "nombre_enfant": null,
+            "groupe_sanguin": "O+"
+        },
+        "motif_consultation": "Confusion et fièvre",
+        "mode_de_vie": {
+            "qualite_eau": "Eau du robinet non filtrée",
+            "moustiquaire": true,
+            "animal_de_compagnie": null,
+            "voyages": [
+                {
+                    "lieu": "Village (Ouest)",
+                    "frequence": null,
+                    "duree": "2 semaines"
+                }
+            ],
+            "activites_physiques": [],
+            "addictions": []
+        },
+        "antecedents_medicaux": {
+            "antecedents_familiaux": [],
+            "allergies": [],
+            "maladies": [],
+            "chirurgies": [],
+            "antecedents_obstetricaux": null
+        },
+        "symptomes": [
+            {
+                "nom": "Fièvre",
+                "localisation": null,
+                "date_debut": null,
+                "frequence": null,
+                "duree": "3 jours",
+                "evolution": null,
+                "activite_declenchante": null,
+                "degre": "39.5°C"
+            }
+        ],
+        "diagnostic_physique": [
+            {
+                "nom": "Palpation splénique",
+                "resultat": "Splénomégalie légère"
+            }
+        ],
+        "examens_complementaires": [
+            {
+                "nom": "Blood Test",
+                "resultat": "Positif Palu ++",
+                "anatomie": "Sang"
+            }
+        ],
+        "traitement_en_cours": []
+    }
+]
