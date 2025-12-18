@@ -31,29 +31,47 @@ JSON_SOURCE = "dataset_cas_cliniques_final.json"
 @app.get("/")
 def read_root():
     return {"status": "online", "message": "API prête."}
-
 @app.get("/api/cases", response_model=List[CasClinique])
 def get_all_cases(
-    keyword: Optional[str] = Query(None),
-    min_age: Optional[int] = Query(None),
-    max_age: Optional[int] = Query(None)
+    keyword: Optional[str] = Query(None, description="Recherche globale (Motif/Examen)"),
+    min_age: Optional[int] = Query(None, description="Âge minimum"),
+    max_age: Optional[int] = Query(None, description="Âge maximum"),
+    gender: Optional[str] = Query(None, description="Sexe (M/F)", max_length=1),
+    profession: Optional[str] = Query(None, description="Filtre par métier (ex: Etudiant)"),
+    symptom: Optional[str] = Query(None, description="Filtre par présence d'un symptôme (ex: Toux)")
 ):
-    # On recharge à chaque appel pour voir les mises à jour
+    """
+    Récupère la liste des cas cliniques avec FILTRAGE AVANCÉ MULTICRITÈRES.
+    """
+    # 1. Chargement
     try:
         manager = ClinicalCaseFilter(JSON_SOURCE)
     except Exception:
-        # Si le fichier est cassé ou absent
         return []
         
     results = manager.cases
 
-    if keyword:
-        results = manager.filter_by_keyword(keyword)
+    # 2. Application en cascade des filtres (Chainage)
     
+    # Filtre Global
+    if keyword:
+        results = manager.filter_by_keyword(keyword, subset=results)
+    
+    # Filtres Démographiques
     if min_age is not None or max_age is not None:
         low = min_age if min_age is not None else 0
         high = max_age if max_age is not None else 120
         results = manager.filter_by_age_group(low, high, subset=results)
+
+    if gender:
+        results = manager.filter_by_gender(gender, subset=results)
+
+    if profession:
+        results = manager.filter_by_profession(profession, subset=results)
+
+    # Filtre Clinique
+    if symptom:
+        results = manager.filter_by_symptom_name(symptom, subset=results)
 
     return results
 
@@ -64,6 +82,24 @@ def get_case_detail(case_id: str):
     if not case:
         raise HTTPException(status_code=404, detail="Cas clinique non trouvé")
     return case
+
+
+@app.get("/api/filters")
+def get_available_filters():
+    """
+    Retourne la liste des valeurs uniques pour les filtres disponibles.
+    """
+    try:
+        manager = ClinicalCaseFilter(JSON_SOURCE)
+        filters = {
+            "genders": manager.get_unique_genders(),
+            "professions": manager.get_unique_professions(),
+            "symptoms": manager.get_unique_symptoms(),
+        }
+        return filters
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 
 @app.post("/api/extract/refresh")
 def trigger_extraction():
