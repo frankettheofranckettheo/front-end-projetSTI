@@ -1,0 +1,288 @@
+{
+    "meta": {
+        "extracted_at": "20251218_011554",
+        "integrity_hash_sha256": "b95bd8125225716e117a5726cb682e8e8ecad7b80a322b2677f9c6067d6e539f",
+        "source": "http://fultang.ddns.net:8009/api/v1/medical/dataset/recent/"
+    },
+    "payload": {
+        "patients": [],
+        "medical_staff": [
+            {
+                "id": 1,
+                "role": "Admin",
+                "userType": "Medical",
+                "accessLevel": "Executive"
+            },
+            {
+                "id": 2,
+                "role": "Doctor",
+                "userType": "Medical",
+                "accessLevel": "Staff"
+            },
+            {
+                "id": 3,
+                "role": "Doctor",
+                "userType": "Medical",
+                "accessLevel": "Staff"
+            },
+            {
+                "id": 4,
+                "role": "Receptionist",
+                "userType": "Medical",
+                "accessLevel": "Staff"
+            },
+            {
+                "id": 5,
+                "role": "Receptionist",
+                "userType": "Medical",
+                "accessLevel": "Staff"
+            },
+            {
+                "id": 6,
+                "role": "Admin",
+                "userType": "Medical",
+                "accessLevel": "Staff"
+            },
+            {
+                "id": 7,
+                "role": "Admin",
+                "userType": "Medical",
+                "accessLevel": "Staff"
+            },
+            {
+                "id": 8,
+                "role": "Nurse",
+                "userType": "Medical",
+                "accessLevel": "Staff"
+            },
+            {
+                "id": 9,
+                "role": "Nurse",
+                "userType": "Medical",
+                "accessLevel": "Staff"
+            },
+            {
+                "id": 10,
+                "role": "Labtech",
+                "userType": "Medical",
+                "accessLevel": "Staff"
+            },
+            {
+                "id": 11,
+                "role": "Labtech",
+                "userType": "Medical",
+                "accessLevel": "Staff"
+            },
+            {
+                "id": 12,
+                "role": "HRM",
+                "userType": "Medical",
+                "accessLevel": "Staff"
+            },
+            {
+                "id": 13,
+                "role": "HRM",
+                "userType": "Medical",
+                "accessLevel": "Staff"
+            },
+            {
+                "id": 14,
+                "role": "Pharmacist",
+                "userType": "Medical",
+                "accessLevel": "Staff"
+            },
+            {
+                "id": 15,
+                "role": "Pharmacist",
+                "userType": "Medical",
+                "accessLevel": "Staff"
+            },
+            {
+                "id": 16,
+                "role": "Cashier",
+                "userType": "Medical",
+                "accessLevel": "Staff"
+            },
+            {
+                "id": 17,
+                "role": "Cashier",
+                "userType": "Medical",
+                "accessLevel": "Staff"
+            },
+            {
+                "id": 18,
+                "role": "Accountant",
+                "userType": "Accountant",
+                "accessLevel": "Staff"
+            },
+            {
+                "id": 19,
+                "role": "Accountant",
+                "userType": "Accountant",
+                "accessLevel": "Staff"
+            },
+            {
+                "id": 20,
+                "role": "Auditor",
+                "userType": "Accountant",
+                "accessLevel": "Staff"
+            },
+            {
+                "id": 21,
+                "role": "Auditor",
+                "userType": "Accountant",
+                "accessLevel": "Staff"
+            },
+            {
+                "id": 22,
+                "role": "FinanceManager",
+                "userType": "Accountant",
+                "accessLevel": "Staff"
+            },
+            {
+                "id": 23,
+                "role": "FinanceManager",
+                "userType": "Accountant",
+                "accessLevel": "Staff"
+            },
+            {
+                "id": 24,
+                "role": "NoRole",
+                "userType": "Medical",
+                "accessLevel": "Staff"
+            }
+        ],
+        "parameters": [],
+        "consultation_types": [],
+        "consultations": [],
+        "medical_folders": [],
+        "medical_folder_pages": [],
+        "exams": [
+            {
+                "id": 1,
+                "examName": "Blood Test",
+                "examCost": 64963.0,
+                "examDescription": "Complete blood count to check for infections, anemia, and other conditions."
+            },
+            {
+                "id": 2,
+                "examName": "X-Ray",
+                "examCost": 79078.0,
+                "examDescription": "Imaging of bones to detect fractures or abnormalities."
+            },
+            {
+                "id": 3,
+                "examName": "MRI Scan",
+                "examCost": 32127.0,
+                "examDescription": "Detailed imaging of soft tissues, organs, and bones using magnetic fields."
+            },
+            {
+                "id": 4,
+                "examName": "CT Scan",
+                "examCost": 71849.0,
+                "examDescription": "Cross-sectional imaging for detailed views of internal structures."
+            },
+            {
+                "id": 5,
+                "examName": "Ultrasound",
+                "examCost": 47997.0,
+                "examDescription": "Imaging using sound waves to visualize organs and tissues."
+            },
+            {
+                "id": 6,
+                "examName": "Electrocardiogram",
+                "examCost": 47871.0,
+                "examDescription": "Records the electrical activity of the heart to detect heart conditions."
+            },
+            {
+                "id": 7,
+                "examName": "Colonoscopy",
+                "examCost": 26819.0,
+                "examDescription": "Examination of the colon to detect polyps or cancer."
+            },
+            {
+                "id": 8,
+                "examName": "Mammogram",
+                "examCost": 29762.0,
+                "examDescription": "Breast cancer screening using X-ray imaging."
+            },
+            {
+                "id": 9,
+                "examName": "Endoscopy",
+                "examCost": 30022.0,
+                "examDescription": "Examination of the digestive tract using a flexible tube with a camera."
+            },
+            {
+                "id": 10,
+                "examName": "Biopsy",
+                "examCost": 99715.0,
+                "examDescription": "Tissue sample analysis to diagnose diseases like cancer."
+            },
+            {
+                "id": 11,
+                "examName": "Blood Sugar Test",
+                "examCost": 23847.0,
+                "examDescription": "Measures the level of glucose in the blood to diagnose diabetes."
+            },
+            {
+                "id": 12,
+                "examName": "Thyroid Function Test",
+                "examCost": 85356.0,
+                "examDescription": "Checks how well the thyroid gland is working."
+            },
+            {
+                "id": 13,
+                "examName": "Liver Function Test",
+                "examCost": 89484.0,
+                "examDescription": "Assesses the health of the liver by measuring enzymes and proteins."
+            },
+            {
+                "id": 14,
+                "examName": "Kidney Function Test",
+                "examCost": 33293.0,
+                "examDescription": "Evaluates how well the kidneys are filtering waste from the blood."
+            },
+            {
+                "id": 15,
+                "examName": "Pap Smear",
+                "examCost": 56898.0,
+                "examDescription": "Screening test for cervical cancer."
+            },
+            {
+                "id": 16,
+                "examName": "Bone Density Test",
+                "examCost": 54952.0,
+                "examDescription": "Measures bone strength and risk of fractures."
+            },
+            {
+                "id": 17,
+                "examName": "Allergy Test",
+                "examCost": 53218.0,
+                "examDescription": "Identifies allergens causing allergic reactions."
+            },
+            {
+                "id": 18,
+                "examName": "Pulmonary Function Test",
+                "examCost": 47031.0,
+                "examDescription": "Assesses lung function and capacity."
+            },
+            {
+                "id": 19,
+                "examName": "Stress Test",
+                "examCost": 5658.0,
+                "examDescription": "Evaluates heart function under physical stress."
+            },
+            {
+                "id": 20,
+                "examName": "Genetic Testing",
+                "examCost": 49687.0,
+                "examDescription": "Analyzes DNA to identify genetic disorders or risks."
+            }
+        ],
+        "exam_requests": [],
+        "exam_results": [],
+        "polyclinic_products": [],
+        "prescriptions": [],
+        "prescription_drugs": []
+    }
+}
